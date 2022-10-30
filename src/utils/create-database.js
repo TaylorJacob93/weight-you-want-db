@@ -24,10 +24,9 @@ const setUpDatabase = async () => {
     await db.query(` CREATE DATABASE IF NOT EXISTS ${DB_NAME}`);
     await db.query(`USE ${DB_NAME}`)
 
-    await db.query(`CREATE TABLE IF NOT EXISTS Client (
+    await db.query(`CREATE TABLE IF NOT EXISTS Profile (
         id INT PRIMARY KEY auto_increment,
         username VARCHAR(255),
-        password VARCHAR(255),
         date VARCHAR(255),
         goal INTEGER(5),
         amWeight INTEGER(5),
